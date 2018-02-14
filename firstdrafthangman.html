@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>hang lettuce</title>
+</head>
+
+<body>
+
+    <div class="game">
+    <h1>Play Hang Lettuce</h1>
+    <p>Prevent this head of lettuce from going to the gallows!</p>
+
+        <div class="word-box">
+
+            <div id="1"></div>
+            <div id="2"></div>
+            <div id="3"></div>
+            <div id="4"></div>
+            <div id="5"></div>
+            <div id="6"></div>
+            <div id="7"></div>
+            <div id="8"></div>
+            <div id="9"></div>
+            <div id="10"></div>
+            <div id="11"></div>
+            <div id="12"></div>
+
+        </div> 
+
+    </div>
+
+    <script>
+
+
+        var wordBank = ["brother", "library", "autonomous", "feline", "lagomorph", "bitters", "catastrophic", "pendulum", "suggestible", "atomized", "nonchalant", "genuine"];
+        var compWord = wordBank[Math.floor(Math.random()*wordBank.length)];
+        console.log(compWord);
+        document.write("The computer has chosen a word.");
+    
+        if (remainingLetters > 0) {  
+                var remainingLetters = compWord.length;
+                console.log(remainingLetters);
+                document.write("There are " + remainingLetters + " letters remaining in this word." );
+       
+        var answerArr = [];
+            for (var i = 0; i < compWord.length; i++) {
+            answerArr.push[i] = "_";
+            console.log(answerArr);
+            document.write("_ ");
+            }
+
+           
+           
+
+
+                document.onkeyup = function(event) {
+                    
+                    var userInput = event.key;
+                    console.log(userInput);
+                    document.write("You have chosen " + userInput);
+        
+
+                    //alert(answerArr.join(" "));
+
+                    for (var a = 0; a < compWord.length; a++) {
+                        if (compWord[a] === userInput ) {
+                        answerArr[a] = userInput;
+                        remainingLetters -- ;
+                        console.log(answerArr);
+                        document.write(answerArr);
+                        console.log(remainingLetters);
+                        document.write("There are " + remainingLetters + " remaining letters in this word");
+                        }
+                    }  
+                  }   
+
+            }
+
+            else {
+                    document.write("the game has ended");
+            }    
+   //}
+         
+        
+         
+           // }       
+
+     // while (remainingLetters > 0) {
+        
+    
+   // }
+        //game code here
+        //show palyer progress
+
+        //take input from player
+
+
+        //update answerArray and remainingLetter sfor every correct guess
+    
+</script>
+
+
+<!--- first i need the computer to choose a word and set the board for the player: 
+    so: create and array of lots of words, 
+     write a function to pull one randomly.-->
+
+
+   <!-- the computer then needs to count the number of letters in the word and provide that many 
+    spaces to the user.
+
+    then i need input from the user. i need to ask them to choose a letter, i need to set up an
+    event listener to pick up the key. 
+
+    then i need to compare the users input to the letters in the computers chosen word.
+
+    if the letter fits, it should dosplay in the appropriate space,
+    if the letter does not fit, it should alert the user and tally a
+    variable called tries. 
+
+    this process should repeat until wither all of the spaces have been filled, or
+    the tried variable reaches '5'.
+
+    if the spaces are all filled the user should get an alert telling them they won,
+    and asking if they would like to play again.
+    if the number of tries = 5, the user should get an alert telling them they have lost
+    and asking them if they would like to try again.
+
+
+
+
+
+
+<script>
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+
+</html>
