@@ -42,7 +42,9 @@
                 var remainingLetters = compWord.length;
                 console.log(remainingLetters);
                 document.write("There are " + remainingLetters + " letters remaining in this word." );
-       
+            
+        }
+
         var answerArr = [];
             for (var i = 0; i < compWord.length; i++) {
             answerArr.push[i] = "_";
@@ -50,20 +52,19 @@
             document.write("_ ");
             }
 
-           
-           
-
 
                 document.onkeyup = function(event) {
                     
                     var userInput = event.key;
                     console.log(userInput);
                     document.write("You have chosen " + userInput);
+
+                }
         
 
                     //alert(answerArr.join(" "));
 
-                    for (var a = 0; a < compWord.length; a++) {
+                  //  for (var a = 0; a < compWord.length; a++) {
                         if (compWord[a] === userInput ) {
                         answerArr[a] = userInput;
                         remainingLetters -- ;
@@ -72,14 +73,14 @@
                         console.log(remainingLetters);
                         document.write("There are " + remainingLetters + " remaining letters in this word");
                         }
-                    }  
-                  }   
+                    //}  
+                  //}   
 
-            }
+            //}
 
-            else {
-                    document.write("the game has ended");
-            }    
+            //else {
+              //      document.write("the game has ended");
+            //}    
    //}
          
         
